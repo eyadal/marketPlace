@@ -124,3 +124,15 @@ main {
     padding: 1rem 1rem;
 
 }
+/* ADD VEHICLE */
+#vehicle {
+  margin: 0 auto;
+  width: 90%;
+}
+.cards {
+justify-content: center;
+text-align: left;
+float: left;
+margin-right: 5rem;;
+padding-top: 2rem;
+}

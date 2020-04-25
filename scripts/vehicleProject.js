@@ -140,8 +140,8 @@ let editFunction = function (value, newFilter, newValue) {
 
 
 
-// Funktion för lägga till nytt fordons objekt
-// let vehicleInfo = createElement('p')
+// // Funktion för lägga till nytt fordons objekt
+// let vehicleInfo = document.createElement('p')
 // let mFor = function () {
 //     let objArr = []
 
