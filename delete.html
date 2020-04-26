@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete vehicle</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
+
+<body id="root">
+    <main>
+        <h1>Delete vehicle</h1>
+        <select id='selectCar'>
+        </select>
+        <form id="myForm">
+
+            <label>Brand:</label>
+            <input type="text" id="addBrandInput" name="vehicleInput" placeholder='Write a reg number'>
+            <br />
+            <label>Year:</label>
+            <input type="number" id="addYearInput" name="vehicleInput" placeholder='Write the year'>
+            <br />
+            <label>Color:</label>
+            <input type="text" id="addColorInput" name="vehicleInput" placeholder='Write a color'>
+            <br />
+            <label>Horsepower:</label>
+            <input type="text" id="addHpInput" name="vehicleInput" placeholder='Write the horsepower'>
+            <br />
+            <label>Model:</label>
+            <input type="text" id="addModelInput" name="vehicleInput" placeholder='Write the model'>
+            <br />
+            <label>Wheels:</label>
+            <input type="number" id="addWheelsInput" name="vehicleInput" placeholder='Write the wheel'>
+            <br />
+            <label>RegNr:</label>
+            <input type="text" id="searchCarByRegNr" name="vehicleInput" placeholder="Write a reg number">
+            <br />
+            <input type="submit" id="formSubmit" value="Delete" />
+        </form>
+
+        <div id=" vehicle">
+        </div>
+    </main>
+    <script src="scripts/delete.js">
+    </script>
+</body>
+
+</html>
