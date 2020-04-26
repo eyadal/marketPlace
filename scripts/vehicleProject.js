@@ -1,5 +1,6 @@
 let vehicle = [
     {
+        id: 1,
         brand: 'mercedes',
         year: 2020,
         color: 'blue',
@@ -9,6 +10,7 @@ let vehicle = [
         regNr: 'UPO321'
     },
     {
+        id: 2,
         brand: 'BMW',
         year: 2019,
         color: 'black',
@@ -17,6 +19,7 @@ let vehicle = [
         wheels: 4,
         regNr: 'ISO451'
     }, {
+        id: 3,
         brand: 'AUDI',
         year: 2020,
         color: 'white',
@@ -26,6 +29,7 @@ let vehicle = [
         regNr: 'HAW873'
     },
     {
+        id: 4,
         brand: 'Kawasaki',
         year: 2007,
         color: 'green',
@@ -35,6 +39,7 @@ let vehicle = [
         regNr: 'POK644'
     },
     {
+        id: 5,
         brand: 'Hundai',
         year: 2017,
         color: 'white',
@@ -44,6 +49,7 @@ let vehicle = [
         regNr: 'LJK543'
     },
     {
+        id: 6,
         brand: 'yamaha',
         year: 2011,
         color: 'pink',
@@ -98,40 +104,40 @@ let filterFunction = function (filter, value) {
     return obj
 
 }
+// Ligger i update!
+// let editFunction = function (value, newFilter, newValue) {
+//     let filter = 'regNr'
+//     let index = []
 
-let editFunction = function (value, newFilter, newValue) {
-    let filter = 'regNr'
-    let index = []
+//     vehicle.forEach((item, index) => {
 
-    vehicle.forEach((item, index) => {
-
-        if (value.toLowerCase() === item.regNr.toLowerCase()) {
-            if (newFilter === 'brand') {
-                item.brand = newValue
-                // console.log(vehicle[index])
-            } else if (newFilter === 'year') {
-                item.year = newValue
-                // console.log(vehicle[index])
-            } else if (newFilter === 'color') {
-                item.color = newValue
-                // console.log(vehicle[index])
-            } else if (newFilter === 'horsePower') {
-                item.horsePower = newValue
-                // console.log(vehicle[index])
-            } else if (newFilter === 'model') {
-                item.model = newValue
-                // console.log(vehicle[index])
-            } else if (newFilter === 'wheels') {
-                item.wheels = newValue
-                // console.log(vehicle[index])
-            } else if (newFilter === 'regNr') {
-                item.regNr = newValue
-                // console.log(vehicle[index])
-            }
-        }
-    })
-    return index
-}
+//         if (value.toLowerCase() === item.regNr.toLowerCase()) {
+//             if (newFilter === 'brand') {
+//                 item.brand = newValue
+//                 // console.log(vehicle[index])
+//             } else if (newFilter === 'year') {
+//                 item.year = newValue
+//                 // console.log(vehicle[index])
+//             } else if (newFilter === 'color') {
+//                 item.color = newValue
+//                 // console.log(vehicle[index])
+//             } else if (newFilter === 'horsePower') {
+//                 item.horsePower = newValue
+//                 // console.log(vehicle[index])
+//             } else if (newFilter === 'model') {
+//                 item.model = newValue
+//                 // console.log(vehicle[index])
+//             } else if (newFilter === 'wheels') {
+//                 item.wheels = newValue
+//                 // console.log(vehicle[index])
+//             } else if (newFilter === 'regNr') {
+//                 item.regNr = newValue
+//                 // console.log(vehicle[index])
+//             }
+//         }
+//     })
+//     return index
+// }
 
 
 

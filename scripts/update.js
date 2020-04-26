@@ -1,7 +1,7 @@
 let vehicle = [
     {
         id: 1,
-        brand: 'mercedes',
+        brand: 'MERCEDES',
         year: 2020,
         color: 'blue',
         horsePower: 455,
@@ -30,7 +30,7 @@ let vehicle = [
     },
     {
         id: 4,
-        brand: 'Kawasaki',
+        brand: 'KAWASAKI',
         year: 2007,
         color: 'green',
         horsePower: 399,
@@ -40,7 +40,7 @@ let vehicle = [
     },
     {
         id: 5,
-        brand: 'Hundai',
+        brand: 'HYUNDAI',
         year: 2017,
         color: 'white',
         horsePower: 55,
@@ -50,7 +50,7 @@ let vehicle = [
     },
     {
         id: 6,
-        brand: 'yamaha',
+        brand: 'YAMAHA',
         year: 2011,
         color: 'pink',
         horsePower: 155,
@@ -60,50 +60,35 @@ let vehicle = [
     }
 
 ]
+console.log(vehicle)
+// skriver ut alla parametrar i ett item.
+let mySelection = document.getElementById('selectCar')
 
-// Funktion för lägga till nytt fordons objekt
-let vehicleInfo = document.createElement('p')
-let mFor = function () {
-    let objArr = []
-
-
-    vehicle.forEach((item, i) => {
-        let myDiv = document.createElement('div')
-        myDiv.setAttribute('class', 'cards')
-        objArr = (
-            myDiv.innerHTML = `
-                <h2>${item.brand}</h2>
-                    <p>year: ${item.year}</p>
-                    <p>color: ${item.color}</p>
-                    <p>horsePower: ${item.horsePower}</p>
-                    <p> model: ${item.model}</p>
-                    <p>wheels: ${item.wheels}</p>
-                    <p>regNr: ${item.regNr}</p>
-                    <p>id: ${item.id}</p>
-        `)
-        document.querySelector('#vehicle').appendChild(myDiv)
-
-
-    })
-    return objArr
-
-
-
+for (let i = 0; i < vehicle.length; i++) {
+    let myOpt = document.createElement('option')
+    myOpt.setAttribute('id', `${vehicle[i].id}`)
+    myOpt.innerHTML = `<label>${vehicle[i].brand}</label>`
+    mySelection.appendChild(myOpt)
 }
 
-document.getElementById('showAll').addEventListener('click', e => {
-    document.querySelector('#vehicle').innerHTML = ' '
-    mFor()
+let j = mySelection.selectedIndex
+mySelection.addEventListener('change', (e) => {
+    j = mySelection.selectedIndex
+    myForm[0].value = vehicle[j].brand
+    myForm[1].value = vehicle[j].year
+    myForm[2].value = vehicle[j].color
+    myForm[3].value = vehicle[j].horsePower
+    myForm[4].value = vehicle[j].model
+    myForm[5].value = vehicle[j].wheels
+    myForm[6].value = vehicle[j].regNr
 })
 
 document.querySelector('#formSubmit').addEventListener('click', (e) => {
     e.preventDefault()
-    addVehicle()
+    updateVehicle()
 })
 
-
-
-let addVehicle = function () {
+let updateVehicle = function () {
     let iBrand = document.getElementById('addBrandInput')
     let iYear = document.getElementById('addYearInput')
     let iColor = document.getElementById('addColorInput')
@@ -130,7 +115,7 @@ let addVehicle = function () {
     let mRegNr = iRegNr.value
 
 
-    vehicle.push({
+    vehicle.splice(j, 1, {
         id: vehicle.length + 1,
         brand: mBrand,
         year: mYear,
@@ -141,6 +126,7 @@ let addVehicle = function () {
         regNr: mRegNr
 
     })
+    console.log(vehicle)
     return vehicle
 }
 
@@ -149,3 +135,51 @@ let addVehicle = function () {
 
 
 
+
+
+
+// vehicle.entries().forEach(
+//     ([key, value]) => console.log(key, value)
+// );
+
+
+
+// for (let [vehicle, allInputs] of Object.entries(allInputs)) {
+//     console.log(vehicle, allInputs);
+// }
+
+
+// let myForm = document.getElementById('myForm').getElementsByTagName("vehicleInput");
+// for (var i = 0, len = myForm.ch; i < len; i++) {
+//     console.log(myForm)
+//     // allTags[i] is an element within the container object
+//     // allTags[i].id is the id of the element (if there is one)
+// }
+
+
+// for (let i = 0; i < myForm.length - 1; i++) {
+//     console.log(myForm[i].value = `${vehicle[i].brand}`)
+// }
+
+
+
+
+
+
+// let myForm = document.querySelectorAll("input");
+// for (const myForm of vehicleInput.values()) {
+//     console.log('bRAND: ', myForm);
+// };
+
+
+
+
+// let test1 = `${myForm[0].value = vehicle[0].brand}
+// ${myForm[1].value = vehicle[0].year}
+// ${myForm[2].value = vehicle[0].color}
+// ${myForm[3].value = vehicle[0].horsePower}
+// ${myForm[4].value = vehicle[0].model}
+// ${myForm[5].value = vehicle[0].wheels}
+// ${myForm[6].value = vehicle[0].regNr}`
+
+// console.log(test1)
