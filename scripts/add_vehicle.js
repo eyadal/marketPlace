@@ -143,9 +143,3 @@ let addVehicle = function () {
     })
     return vehicle
 }
-
-
-
-
-
-

@@ -60,19 +60,20 @@ let vehicle = [
     }
 
 ]
-console.log(vehicle)
+
 // skriver ut alla parametrar i ett item.
 let mySelection = document.getElementById('selectCar')
 
 for (let i = 0; i < vehicle.length; i++) {
     let myOpt = document.createElement('option')
     myOpt.setAttribute('id', `${vehicle[i].id}`)
-    myOpt.innerHTML = `<label>${vehicle[i].brand}</label>`
+    myOpt.innerHTML = `${vehicle[i].brand}`
     mySelection.appendChild(myOpt)
 }
 
 let j = mySelection.selectedIndex
 mySelection.addEventListener('change', (e) => {
+
     j = mySelection.selectedIndex
     myForm[0].value = vehicle[j].brand
     myForm[1].value = vehicle[j].year
@@ -81,6 +82,7 @@ mySelection.addEventListener('change', (e) => {
     myForm[4].value = vehicle[j].model
     myForm[5].value = vehicle[j].wheels
     myForm[6].value = vehicle[j].regNr
+
 })
 
 document.querySelector('#formSubmit').addEventListener('click', (e) => {
