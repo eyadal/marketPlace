@@ -67,7 +67,7 @@ let mFor = function () {
     let objArr = []
 
 
-    vehicle.forEach((item, i) => {
+    vehicle.map((item, i) => {
         let myDiv = document.createElement('div')
         myDiv.setAttribute('class', 'cards')
         objArr = (

@@ -12,29 +12,31 @@
     <main>
         <h1>Add vehicle</h1>
         <form id="myForm">
-            <label>Brand:</label>
-            <input type="text" id="addBrandInput" placeholder='Write a reg number'>
+            <select id="modelYear">
+                <option>Select model Year</option>
+            </select><br />
+            <select id="mileAge">
+                <option>Select mileage</option>
+            </select>
             <br />
-            <label>Year:</label>
-            <input type="number" id="addYearInput" placeholder='Write the year'>
+            <select id="carBody">
+                <option>Select body</option>
+            </select>
             <br />
-            <label>Color:</label>
-            <input type="text" id="addColorInput" placeholder='Write a color'>
+            <select id="gearbox">
+                <option>Select gearbox</option>
+            </select>
             <br />
-            <label>Horsepower:</label>
-            <input type="text" id="addHpInput" placeholder='Write the horsepower'>
+            <select id="fuel">
+                <option>Select fuel</option>
+            </select>
             <br />
-            <label>Model:</label>
-            <input type="text" id="addModelInput" placeholder='Write the model'>
+            <input type="text" id="brandTitle" placeholder="Add your model and brand" />
             <br />
-            <label>Wheels:</label>
-            <input type="number" id="addWheelsInput" placeholder='Write the wheel'>
+            <textarea type="textarea" placeholder="Write some information here"></textarea>
             <br />
-            <label>RegNr:</label>
-            <input type="text" id="searchCarByRegNr" placeholder='Write a reg number'>
-            <br />
-            <input type="button" id="showAll" value="show vehicles" />
-            <br />
+            <input type="button" id="showAll" value="show vehicles" /> <br />
+
             <input type="submit" id="formSubmit" value="Add" />
         </form>
 

@@ -64,12 +64,14 @@ let vehicle = [
 // skriver ut alla parametrar i ett item.
 let mySelection = document.getElementById('selectCar')
 
-for (let i = 0; i < vehicle.length; i++) {
+const map1 = vehicle.map(vehicleItem =>{
     let myOpt = document.createElement('option')
-    myOpt.setAttribute('id', `${vehicle[i].id}`)
-    myOpt.innerHTML = `${vehicle[i].brand}`
+    myOpt.setAttribute('id', `${vehicleItem.id}`)
+    myOpt.innerHTML = `${vehicleItem.brand}`
     mySelection.appendChild(myOpt)
-}
+});
+
+
 
 let j = mySelection.selectedIndex
 mySelection.addEventListener('change', (e) => {

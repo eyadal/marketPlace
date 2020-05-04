@@ -60,16 +60,26 @@ let vehicle = [
     }
 
 ]
-console.log(vehicle)
+// console.log(vehicle)
 // skriver ut alla parametrar i ett item.
 let mySelection = document.getElementById('selectCar')
 
-for (let i = 0; i < vehicle.length; i++) {
+
+
+const deleteItem = vehicle.map(car => {
     let myOpt = document.createElement('option')
-    myOpt.setAttribute('id', `${vehicle[i].id}`)
-    myOpt.innerHTML = `<label>${vehicle[i].brand}</label>`
+    myOpt.setAttribute('id', `${car.id}`)
+    myOpt.innerHTML = `<label>${car.brand}</label>`
     mySelection.appendChild(myOpt)
-}
+});
+
+
+// for (let i = 0; i < vehicle.length; i++) {
+//     let myOpt = document.createElement('option')
+//     myOpt.setAttribute('id', `${vehicle[i].id}`)
+//     myOpt.innerHTML = `<label>${vehicle[i].brand}</label>`
+//     mySelection.appendChild(myOpt)
+// }
 
 let j = mySelection.selectedIndex
 mySelection.addEventListener('change', (e) => {
@@ -115,7 +125,7 @@ let updateVehicle = function () {
     let mRegNr = iRegNr.value
 
 
-    vehicle.splice(j, 1, )
+    vehicle.splice(j, 1)
     console.log(vehicle)
     return vehicle
 }
