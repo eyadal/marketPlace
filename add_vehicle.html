@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add vehicle</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 
@@ -12,35 +12,32 @@
     <main>
         <h1>Add vehicle</h1>
         <form id="myForm">
-            <select id="modelYear">
-                <option>Select model Year</option>
-            </select><br />
-            <select id="mileAge">
-                <option>Select mileage</option>
-            </select>
+            <label>Brand:</label>
+            <input type="text" id="addBrandInput" placeholder='Write a reg number' required>
             <br />
-            <select id="carBody">
-                <option>Select body</option>
-            </select>
+            <label>Year:</label>
+            <input type="number" id="addYearInput" placeholder='Write the year' required>
             <br />
-            <select id="gearbox">
-                <option>Select gearbox</option>
-            </select>
+            <label>Color:</label>
+            <input type="text" id="addColorInput" placeholder='Write a color' required>
             <br />
-            <select id="fuel">
-                <option>Select fuel</option>
-            </select>
+            <label>Horsepower:</label>
+            <input type="text" id="addHpInput" placeholder='Write the horsepower' required>
             <br />
-            <input type="text" id="brandTitle" placeholder="Add your model and brand" />
+            <label>Model:</label>
+            <input type="text" id="addModelInput" placeholder='Write the model' required>
             <br />
-            <textarea type="textarea" placeholder="Write some information here"></textarea>
+            <label>Wheels:</label>
+            <input type="number" id="addWheelsInput" placeholder='Write the wheel' required>
             <br />
-            <input type="button" id="showAll" value="show vehicles" /> <br />
-
+            <label>RegNr:</label>
+            <input type="text" id="searchCarByRegNr" placeholder='Write a reg number' required>
+            <br />
+            <input type="button" id="showAll" value="show vehicles" />
+            <br />
             <input type="submit" id="formSubmit" value="Add" />
         </form>
-
-        <div id="vehicle">
+        <div id="vehicle"></div>
         </div>
     </main>
     <script src="scripts/add_vehicle.js">

@@ -97,9 +97,26 @@ document.getElementById('showAll').addEventListener('click', e => {
 })
 
 document.querySelector('#formSubmit').addEventListener('click', (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     addVehicle()
+    alert('Vehicle added successfully!')
+    logAddVehicle()
+    resetForm()
+    pressAdd()
+    mFor()
 })
+
+let logAddVehicle = function () {
+    console.log('nu är allt fixat')
+}
+
+let pressAdd = function () {
+    let myMain = document.getElementById('myForm')
+    let press = document.createElement('input')
+    press.setAttribute('type', 'button')
+    press.setAttribute('value', 'Tryck mig!')
+    myMain.appendChild(press)
+}
 
 
 
@@ -141,5 +158,25 @@ let addVehicle = function () {
         regNr: mRegNr
 
     })
-    return vehicle
+
+}
+
+let resetForm = function () {
+    let iBrand = document.getElementById('addBrandInput')
+    let iYear = document.getElementById('addYearInput')
+    let iColor = document.getElementById('addColorInput')
+    let iHp = document.getElementById('addHpInput')
+    let iModel = document.getElementById('addModelInput')
+    let iWheels = document.getElementById('addWheelsInput')
+    let iRegNr = document.getElementById('searchCarByRegNr')
+
+    iBrand.value = ''
+    iYear.value = ''
+    iColor.value = ''
+    iHp.value = ''
+    iModel.value = ''
+    iWheels.value = ''
+    iRegNr.value = ''
+
+
 }
