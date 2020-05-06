@@ -78,7 +78,7 @@ select {
   }
 }
 
-#myForm{
+#myAdminForm{
   margin: 0 auto;  
   width:400px;
 
@@ -87,7 +87,7 @@ select {
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 } 
-#myForm #brand {
+#myAdminForm #brand {
 padding: 0.5rem
 }
 

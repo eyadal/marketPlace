@@ -73,6 +73,39 @@ let vehicle = [
 
 ]
 
+
+// starts here
+// Funktion för lägga till nytt fordons objekt
+let vehicleInfo = document.createElement('p')
+let mFor = function () {
+    let objArr = []
+
+
+    vehicle.map((item, i) => {
+        let myDiv = document.createElement('div')
+        myDiv.setAttribute('class', 'cards')
+        objArr = (
+            myDiv.innerHTML = `
+                <h2>${item.brand}</h2>
+                    <p>year: ${item.year}</p>
+                    <p>color: ${item.color}</p>
+                    <p>horsePower: ${item.horsePower}</p>
+                    <p> model: ${item.model}</p>
+                    <p>wheels: ${item.wheels}</p>
+                    <p>regNr: ${item.regNr}</p>
+                    <p>id: ${item.id}</p>
+        `)
+        document.querySelector('#allVehicle').appendChild(myDiv)
+
+
+    })
+    return objArr
+}
+
+// Finish here
+
+
+
 let myH2Tag = document.createElement('h2')
 
 let myH2Generator = function (value) {
@@ -97,15 +130,20 @@ function getName() {
     myH2Generator(name)
 
     if (name === 'yamaha') {
+        document.querySelector('#allVehicle').innerHTML =' '
         myH2Tag.innerHTML = 'This is a yamaha car.'
     } else if (name === 'kawasaki') {
+        document.querySelector('#allVehicle').innerHTML = ' '
         myH2Tag.innerHTML = 'det här är en motorcykel'
     } else {
+        document.querySelector('#allVehicle').innerHTML = ' '
         myH2Tag.innerHTML = 'värdet uppfattades inte'
+        mFor()
     }
 }
 
 document.getElementById('searchBtn').addEventListener('click', getName)
+mFor()
 
 
 
